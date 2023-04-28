@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Minecraft";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Minecraft Rus"), url(../fonts/minecraft.ttf);
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Minecraft";
+  font-weight: 100;
+}
+
+/* Текст */
+h1 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+.wrapper {
+  width: 600px;
+  max-width: 70vw;
+  margin: 10px auto;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.mini-text {
+  font-size: 10px;
+  margin: 2px;
+}
+
+/* Списки */
+li {
+  margin: 10px 0;
+}
+
+ul>li {
+  list-style-type: square;
+}
+
+ol {
+  margin-left: 40px;
+}
+
+/* Ориентирование текста, по аналогии с горячими клавишами ворда */
+.ctrl-l {
+  text-align: left;
+}
+
+.ctrl-e {
+  text-align: center;
+}
+
+.ctrl-r {
+  text-align: center;
+}
+
+.ctrl-j {
+  text-align: justify;
+}
+
+/* Декорация текста */
+.non-dec {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}

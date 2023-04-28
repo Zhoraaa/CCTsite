@@ -1,0 +1,178 @@
+/* Базовые стили */
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #c6cbff;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #060606;
+}
+
+.content {
+  width: 100vw;
+  margin: calc(20vh) 0;
+  padding: 10px 0;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.5vh);
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.logo {
+  width: 100px;
+}
+
+.hide{
+  display: none;
+  opacity: 0;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+/* Позиционирование */
+
+.flex{
+  display: flex;
+}
+.f-dir-column{
+  flex-direction: column;
+}
+.auto-row{
+  margin: 0 auto;
+}
+
+/* Фон */
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background>img {
+  min-height: 130vh;
+  width: calc(130vh * 1.618);
+}
+
+/* Кнопки-ссылки */
+.btns {
+  width: 600px;
+  max-width: 70vw;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.neon-block {
+  max-width: 80vw;
+  margin: 10px;
+  border: 1px #c6cbff solid;
+  border-radius: 15px;
+  padding: 15px;
+
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+@keyframes text-pulsation {
+  0%{
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  }
+  50%{
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.75);
+  }
+  100%{
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  }
+}
+
+@keyframes background-pulsation {
+  0%{
+    background: rgba(0, 0, 0, 0.4);
+  }
+  50%{
+    background: rgba(0, 0, 0, 0.6);
+  }
+  100%{
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.neon-block:hover {
+  background: rgba(0, 0, 0, 0.4);
+  word-wrap: nowrap;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  /* animation: text-pulsation 1s ease 0s infinite;
+  animation: background-pulsation 1s ease 0s infinite; */
+}
+
+/* Анимации */
+
+@keyframes innerAnimation {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.inner{
+  animation: innerAnimation 500ms ease-in-out 0s 1;
+}
+@keyframes outerAnimation {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+.outer{
+  animation: innerAnimation 500ms ease-in-out 0s forwards;
+}
+
+/* Формы */
+
+.text-input {
+  max-width: 80vw;
+  margin: 10px;
+  border: 1px #c6cbff solid;
+  border-radius: 15px;
+  padding: 15px;
+
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
