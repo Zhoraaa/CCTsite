@@ -1,0 +1,14 @@
+{
+  "1":{
+    "name":"Правила",
+    "link":"rules.php"
+  },
+  "2":{
+    "name":"Присоедениться",
+    "link":"application.php"
+  },
+  "3":{
+    "name":"Войти",
+    "link":"auth-page.php"
+  }
+}

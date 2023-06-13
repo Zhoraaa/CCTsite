@@ -38,10 +38,10 @@ CREATE TABLE `navigation` (
 --
 
 INSERT INTO `navigation` (`id`, `name`, `link`) VALUES
-(1, 'Правила', '../pages/rules.php'),
+(1, 'Правила', '../rules.php'),
 (2, 'Присоедениться', 'https://vk.com/topic-210386301_48662115'),
-(3, 'CCT-Вики', '../pages/test-splash.php'),
-(4, 'Войти', '../pages/auth-page.php');
+(3, 'CCT-Вики', '../test-splash.php'),
+(4, 'Войти', '../auth-page.php');
 
 -- --------------------------------------------------------
 
