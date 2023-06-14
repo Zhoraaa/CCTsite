@@ -5,7 +5,7 @@ include("./pageBase.php");
 <!-- Привязку почты -->
 <!-- Дату регистрации -->
 <!-- Статус аккаунта (Пользователь/игрок/администратор) -->
-<div class="content f-dir-column">
+<div class="content center f-dir-column">
     <a href="../index.php"><img src="../img/logo.png" alt="Логотип Сасити" title="На главную" class="logo"></a>
 
     <!-- Блок с выводом ника и предложением его сменить -->

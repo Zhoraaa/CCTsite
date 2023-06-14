@@ -2,7 +2,7 @@
 include("pageBase.php");
 ?>
 <!-- Главная, логотип явлется ссылкой на перезагрузку, появится в случае ошибки подгрузки стилей -->
-<div class="content f-dir-column ctrl-j">
+<div class="content center f-dir-column ctrl-j">
     <a href="/"><img src="./img/logo.png" alt="Перезагрузить страницу" title="#CaCuTi" class="logo"></a>
     <!-- Приветка для не авторизованного пользователя, Текст берётся из БД -->
     <?php
