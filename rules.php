@@ -1,7 +1,7 @@
 <?php
 include("./pageBase.php");
 ?>
-<div class="content f-dir-column">
+<div class="content m20vh f-dir-column">
     <a href="../index.php"><img src="../img/logo.png" alt="Логотип Сасити" title="На главную" class="logo"></a>
 
     <h1>Правила</h1>
