@@ -18,7 +18,7 @@ function getIP() {
 	navigator.clipboard.writeText("123");
 }
 
-// Получение $_GET значений
+// Получение $_POST значений
 function getGET() {
 	let getURL = location.search.substring(1)
 	.split("&")

@@ -9,7 +9,7 @@ header("Content-Type: application/json");
 
 $response = [
   "status" => false,
-  "description" => "Пользователь не добавлен."
+  "description" => "Пользователь не аутентифицирован."
 ];
 
 if (!empty($_POST['name']) || !empty($_POST['password'])) {
@@ -17,21 +17,16 @@ if (!empty($_POST['name']) || !empty($_POST['password'])) {
 
   if (!mysqli_errno($con)) {
     $name = $_POST['name'];
-    $password = $_POST['password'];
+    $accesstoken = $_POST['accesstoken'];
 
-    $password = base64_encode(hash("sha256", $name . $password));
-
-    $seed = time() * random_int(1, 256);
-    $newAccesstoken = base64_encode(hash("sha256", $seed));
-
-    $query = "INSERT INTO `users` (`id`, `name`, `pass`, `accestoken`, `role`) VALUES (NULL, '$name', '$password', '$newAccesstoken', '1')";
+    $query = "SELECT * FROM `users` WHERE `name` = '$name' AND `accesstoken` = '$accesstoken'";
     $res = $con->query($query);
 
     $responseCode = 200;
 
     $response = [
       "status" => true,
-      "description" => "Пользователь добавлен."
+      "description" => "Пользователь аутентифицирован."
     ];
   }
 }

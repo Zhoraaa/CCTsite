@@ -8,8 +8,7 @@ header("Access-Control-Allow-Credentials: true");
 header("Content-Type: application/json");
 
 $response = [
-  "status" => false,
-  "description" => "Пользователь не добавлен."
+  "status" => false
 ];
 
 if (!empty($_POST['name']) || !empty($_POST['password'])) {
@@ -21,17 +20,15 @@ if (!empty($_POST['name']) || !empty($_POST['password'])) {
 
     $password = base64_encode(hash("sha256", $name . $password));
 
-    $seed = time() * random_int(1, 256);
-    $newAccesstoken = base64_encode(hash("sha256", $seed));
-
-    $query = "INSERT INTO `users` (`id`, `name`, `pass`, `accestoken`, `role`) VALUES (NULL, '$name', '$password', '$newAccesstoken', '1')";
+    $query = "SELECT `accesstoken` FROM `users` WHERE `name` = '$name' AND `password` = '$password'";
     $res = $con->query($query);
+    $user = $res->fetch_assoc();
 
     $responseCode = 200;
 
     $response = [
       "status" => true,
-      "description" => "Пользователь добавлен."
+      "accesstoken" => '"'.$user['accesstoken'].'"'
     ];
   }
 }
